@@ -57,18 +57,17 @@ If should appears this output:
 `
 ##### Then you  make the NGINX container available to the network with the command:
 
-`kubectl expose deployment nginx-deployment --type=NodePort --port=8080
-`
+`kubectl expose deployment nginx-deployment --type=NodePort --port=8080`
+
 Run this command to access to the web, so you can generate logs to see later. Once you have the url in your explorer, you can perform several calls so that you populate the log files in all the pods.
 
-`minikube service nginx-deployment
-`
+`minikube service nginx-deployment`
+
 #### Cloning the repo
 
 In your Git bash shell console, choose a dir where you want to clone the report and type:
 
-`git clone https://github.com/joseluispozagit/kubelogs.git kubelogs
-`
+`git clone https://github.com/joseluispozagit/kubelogs.git kubelogs`
 
 ####  Create and activate venv environment
 
@@ -82,8 +81,8 @@ source ./venv/bin/activate
 
 In your powershell console (with admin user), go to he kubelogs dir and  type:
 
-`pip install -r requirements.txt
-`
+`pip install -r requirements.txt`
+
 ####  Run the program
 
 In order to run de script, open  a powershell console (with admin user), then go to he kubelogs dir and  type:
