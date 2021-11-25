@@ -73,9 +73,9 @@ In your Git bash shell console, choose a dir where you want to clone the report 
 
 In your powershell console (with admin user), go to he kubelogs dir and  type:
 
-mkdir venv
-python3 -m venv ./venv
-source ./venv/bin/activate
+    mkdir venv
+    python3 -m venv ./venv
+    source ./venv/bin/activate
 
 ####  installing python libs
 
