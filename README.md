@@ -18,35 +18,35 @@ https://docs.docker.com/desktop/windows/install/
 
 ##### You have to install minikube on a Windows host following the follow  link intructions.
 
-#####Open a Power Shell session in admin mode and run the next command in order to install the last version:
+##### Open a Power Shell session in admin mode and run the next command in order to install the last version:
 
     New-Item -Path 'c:\' -Name 'minikube' -ItemType Directory -Force
     Invoke-WebRequest -OutFile 'c:\minikube\minikube.exe' -Uri 'https://github.com/kubernetes/minikube/releases/latest/download/minikube-windows-amd64.exe' -UseBasicParsing
 
-#####Add the binary in to your PATH by lauching this command:
+##### Add the binary in to your PATH by lauching this command:
 
     $oldPath = [Environment]::GetEnvironmentVariable('Path', [EnvironmentVariableTarget]::Machine)
     if ($oldPath.Split(';') -inotcontains 'C:\minikube'){ `
       [Environment]::SetEnvironmentVariable('Path', $('{0};C:\minikube' -f $oldPath), [EnvironmentVariableTarget]::Machine) `
     }
 
-#####Start your cluster in a Windows Power Shell **with admin perms**, running:
+##### Start your cluster in a Windows Power Shell **with admin perms**, running:
 `minikube start`
 
-#####Update to kubectl v1.22.3
+##### Update to kubectl v1.22.3
 `minikube kubectl -- get po -A`
 
-#####Checking the correct installation by running:
+##### Checking the correct installation by running:
 `kubectl get po -A`
 
-####Install an nginx deployment in the cluster 
+#### Install an nginx deployment in the cluster 
 
 
-#####Create the Deployment by running the following command:
+##### Create the Deployment by running the following command:
 
 `kubectl apply -f https://k8s.io/examples/controllers/nginx-deployment.yaml`
 
-#####Check if the Deployment was created.
+##### Check if the Deployment was created.
 
 `kubectl get deployments
 `
@@ -54,7 +54,7 @@ If should appears this output:
 
 `nginx-deployment   1/1     1            1           2d1h
 `
-#####Then you  make the NGINX container available to the network with the command:
+##### Then you  make the NGINX container available to the network with the command:
 
 `kubectl expose deployment nginx-deployment --type=NodePort --port=8080
 `
