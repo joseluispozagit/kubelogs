@@ -39,7 +39,7 @@ https://docs.docker.com/desktop/windows/install/
 ##### Checking the correct installation by running:
 `kubectl get po -A`
 
-#### Install an nginx deployment in the cluster 
+#### Install one nginx deployment in the cluster 
 
 
 ##### Create the Deployment by running the following command:
