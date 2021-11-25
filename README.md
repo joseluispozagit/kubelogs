@@ -2,11 +2,12 @@
 # Kubelogs
 
 ### Requirements
-This script have used the follow technologies:
+This script have used the follow technologies and versions:
 
 - Operative System: Windows 10
-- Python version: 3.9.4
-
+- Python: 3.9.4 
+- Docker Desktop: 3.1.0
+- Minikube: v1.24.0
 
 #### Docker Desktop 
 
